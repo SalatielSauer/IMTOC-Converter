@@ -1,4 +1,4 @@
-//IMTOC by Salatiel, special thanks to RaZgRiZ for giving me some important tips.
+//IMTOC by Salatiel, special thanks to RaZgRiZ for giving me some important tips about the output format.
 
 window.onload = function(){
 	 document.getElementById('fileinput').addEventListener('change', importtxt, false);
