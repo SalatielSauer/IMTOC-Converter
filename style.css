@@ -53,7 +53,7 @@ label:hover{
 	background-color: #40428c;
 }
 
-a {color: #6467c5; text-decoration: none;}
+a {color: #6467c5; text-decoration: none; font-family: 'Sauer_default'}
 
 /* Scrollbar by: GhostRider (https://codepen.io/GhostRider/pen/GHaFw) */
 textarea::-webkit-scrollbar-track
