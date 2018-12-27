@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>IMTOC</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans|Ubuntu" rel="stylesheet">
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	</head>
+
+	<body>
+		<script src="imtoc_web.js"></script>
+		<center>
+			<h2>IMTOC Image to CFG</h2>
+			<p style="color: white; font-size: small">Transforms an image converted to text with <a target="_blank" href="https://www.imagemagick.org/script/download.php">ImageMagick</a> into an executable format for <a target="_blank" href="http://sauerbraten.org/">Sauerbraten</a></p>
+			<br>
+			<div class="content">
+			<label>
+				<input type="file" id="fileinput"><br><br><br><br><br><br><br>Import TXT</input>
+			</label>
+				<textarea style="color: #b0d27b" id="text"></textarea>
+				<button id="convert" onclick="startfor()">Convert ←→</button>
+				<textarea id="cfg"></textarea>
+				<button id="download" onclick="downloadcfg()">Download CFG</button>
+			</div>
+			<p style="color: gray; font-size: x-small;">the conversion may take a while with large files</p>
+		</center>
+	</body>
+</html>
