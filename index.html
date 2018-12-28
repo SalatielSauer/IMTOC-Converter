@@ -44,16 +44,17 @@
 			<img width="550px" src="demo.png"/>
 			<h3>What's Data Reader?</h3>
 			<p>This field is dedicated to the CubeScript that is responsible for transforming the hexadecimal values ​​into cubes ingame.</p>
-			<p>The default is a simple data reader, not perfect but works fine, I hope someone more skilled make a better version of it.</p>
+			<!-- <p>The default is a simple data reader, not perfect but works fine, I hope someone more skilled make a better version of it.</p> -->
 			<p>It is added to the end of the output, after converting.</p>
 			<p>if you want to make your own 'Data reader' (<strong>not necessary</strong>), the important variables are:</p>
 			<p><span style="color: gray">$imtoc_imagename<br>$imtoc_imagew<br>$imtoc_imageh<br>$imtoc_colordata</span></p>
 			<p>(and the alpha value has 10 characters, a normal color only 8)</p>
 			<h2>Ingame Guide:</h2>
 			<p>After putting the cfg file in the sauerbraten folder and running it ingame...</p>
-			<p>Assuming you're using the default data reader...</p>
-			<p><span style="color: gray">/imtoc-reset</span> will reset the 'pixel id' value to 0, you must do this every time you start a new image.</p>
-			<p><span style="color: gray">/imtoc-undo</span> this subtracts the width value from the 'pixel id', then you can re-draw this line.</p>
-			<p><span style="color: gray">/imtoc imagename 0/1</span> this is the command that will actually draw the pixel/cube, the name of the image should be the cfg name you downloaded earlier. 0/1 disable or enable alpha.</p>
+			<p>Assuming you're using the data reader made by RaZgRiZ...</p>
+			<p><span style="color: gray">/drawloadimg</span> the name of the image should be the cfg name you downloaded earlier.</p>
+			<p><span style="color: gray">/drawreset</span> will reset the 'pixel id' value to 0, you must do this every time you start a new image.</p>
+			<p><span style="color: gray">/drawundo</span> this subtracts the width value from the 'pixel id', then you can re-draw this line.</p>
+			<p><span style="color: gray">/drawrow 1</span> this is the command that will actually draw the pixel/cube. If 1 is set, the image will not have a background (alpha)<p>
 	</body>
 </html>
