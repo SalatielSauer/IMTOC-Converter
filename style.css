@@ -1,5 +1,5 @@
-p {font-family: 'Ubuntu', sans-serif;}
-h2 {
+p {font-family: 'Ubuntu', sans-serif; color: white;}
+h2, h3 {
 	color: white;
 	font-family: 'PT Sans', sans-serif;
 }

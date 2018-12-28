@@ -35,6 +35,28 @@
 			<a style="font-size: small" target="_blank" href="https://www.online-utility.org/image/convert/to/TXT">https://www.online-utility.org/image/convert/to/TXT</a>
 			<br>
 			<a style="font-size: small" target="_blank" href="https://imagemagick.online/">https://imagemagick.online/</a>
-			<br>
+			<hr>
+			<h2>Guide:</h2>
+			<p>First of all you need to choose one of the online tools to convert your image to a txt file (they all use ImageMagick to convert).</p>
+			<p>After downloading the txt file, you can import or paste it into the left text field (If you paste, the image name will not be saved).</p>
+			<p>The text field on the right is where the result will be stored after you click Convert, you can download the cfg (result) file by clicking on the last button.</p>
+			<h3>What's Data Reader?</h3>
+			<p>This field is dedicated to the CubeScript that is responsible for transforming the hexadecimal values ​​into cubes ingame.</p>
+			<p>The default is a simple data reader, not perfect but works fine, I hope someone more skilled make a better version of it.</p>
+			<p>It is added to the end of the output, after converting.</p>
+			<p>if you want to make your own (<strong>not necessary</strong>), the important variables are:</p>
+			<span style="color: gray">
+				<p>$imtoc_imagename</p>
+				<p>$imtoc_imagew</p>
+				<p>$imtoc_imageh</p>
+				<p>$imtoc_colordata</p>
+			</span>
+
+			<h2>Ingame Guide:</h2>
+			<p>After putting the cfg file in the sauerbraten folder and running it ingame...</p>
+			<p>Assuming you're using the default data reader...</p>
+			<p><span style="color: gray">/imtoc-reset</span> will reset the 'pixel id' value to 0, you must do this every time you start a new image.</p>
+			<p><span style="color: gray">/imtoc-undo</span> this subtracts the width value from the 'pixel id', then you can re-draw this line.</p>
+			<p><span style="color: gray">/imtoc imagename 0/1</span> this is the command that will actually draw the pixel/cube, the name of the image should be the cfg name you downloaded earlier. 0/1 disable or enable alpha.</p>
 	</body>
 </html>
