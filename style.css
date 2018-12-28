@@ -14,6 +14,14 @@ body {
     display: flex;
 }
 
+.overtext {
+	display: flex;
+	position: absolute;
+	background-color: #000000a6;
+	
+	padding: 10px;"
+}
+
 @font-face {
     font-family: 'Sauer_default';
     src: url('default.ttf');
@@ -56,30 +64,27 @@ label:hover{
 a {color: #6467c5; text-decoration: none; font-family: 'Sauer_default'}
 
 /* Scrollbar by: GhostRider (https://codepen.io/GhostRider/pen/GHaFw) */
-textarea::-webkit-scrollbar-track
+::-webkit-scrollbar-track
 {
 	-webkit-box-shadow: inset 0 0 6px rgba(1,1,1,1.3);
-	
 	background-color: #201d1a;
 }
 
-textarea::-webkit-scrollbar
+::-webkit-scrollbar
 {
-	z-index: 1;
 	width: 12px;
 	background-color: #201d1a;
 	
 }
 
-textarea::-webkit-scrollbar-thumb
+::-webkit-scrollbar-thumb
 {
 	border-radius: 2px;
 	-webkit-box-shadow: inset 0 0 6px rgba(1,1,1,.3);
 	background-color: #e5d4b3;
-	c
 }
 
-textarea::-webkit-scrollbar-corner { background-color: #201d1a;}
+::-webkit-scrollbar-corner { background-color: #201d1a;}
 ::-webkit-scrollbar {
     cursor:pointer;
 }
