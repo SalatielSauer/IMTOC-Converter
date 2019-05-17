@@ -18,10 +18,10 @@ userfile = "untitled";
 txtfilename = "untitled.cfg";
 
 function importImg(e){
-	inputtext.innerText = "Reading image...";
     var reader = new FileReader();
 	userfile = e.target.files[0];
 	if (userfile){
+		inputtext.innerText = "Reading image...";
 		reader.onload = function(event){
 			var img = new Image();
 			img.onload = function(){
@@ -34,6 +34,9 @@ function importImg(e){
 			img.src = event.target.result;
 		}
 		reader.readAsDataURL(e.target.files[0]);
+	} else {
+		downloadbtn.style = "";
+		
 	};
 };
 
