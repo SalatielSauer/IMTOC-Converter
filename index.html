@@ -5,6 +5,8 @@
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans|Ubuntu" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
 	</head>
 
 	<body>
@@ -13,44 +15,45 @@
 		<script src="datareaders.js"></script>
 		<center>
 			<h2>IMTOC Image to CFG</h2>
-			<p style="color: white; font-size: small">Transforms an image converted to text with <a target="_blank" href="https://www.imagemagick.org/script/download.php">ImageMagick</a> into an executable format for <a target="_blank" href="http://sauerbraten.org/">Sauerbraten</a></p>
+			<p style="color: white; font-size: small">Transforms an image into an executable format for <a target="_blank" href="http://sauerbraten.org/">Sauerbraten</a>.</p>
 			<br>
 			<p style="color: white">Data Reader</p>
 			<p style="color: gray; font-size: 12px;">paste here the cubescript that will handle the color data (or use the default by RaZgRiZ)</p>
 			<textarea style="color: #80ea97; width: 600px; height: 70px" spellcheck="false" id="datareader"></textarea>
 			<br>
-			<input type=hidden id="cfg"></input>
+			<canvas style="display: none" id="imageCanvas"></canvas>
 			<label>
-				<input type="file" accept=".txt" id="fileinput" ><span id="fileinputtext">Select .txt File & Convert to .cfg</span></input>
+				<input type="file" accept="image/*" id="fileinput" ><span id="fileinputtext"><i class="far fa-image"></i> Upload Image & Convert to .cfg</span></input>
 			</label>
-			<a style="background-color: #5d5d5d; cursor: unset; user-select: none;" id="downloadbtn">Download</a>
+			<a style="background-color: #5d5d5d; cursor: unset; user-select: none;" id="downloadbtn"><i class="fas fa-file-download"></i> Download</a>
 		</center>
 			<center><p style="color: white; position: relative; top: 15;" id="filestatus"><br></p></center>
-			<p style="color: white">Useful online tools to convert image to txt:</p>
+			<!-- <p style="color: white">Useful online tools to convert image to txt:</p>
 			<a style="font-size: small" target="_blank" href="https://magick.imagemagick.org/MagickStudio/scripts/MagickStudio.cgi">https://magick.imagemagick.org/MagickStudio/scripts/MagickStudio.cgi</a>
 			<br>
 			<a style="font-size: small" target="_blank" href="https://www.online-utility.org/image/convert/to/TXT">https://www.online-utility.org/image/convert/to/TXT</a>
 			<br>
 			<a style="font-size: small" target="_blank" href="https://imagemagick.online/">https://imagemagick.online/</a>
-			<hr>
-			<h2>Update 16/05/2019</h2>
-			<p>You can now send larger text files with less time consuming than before.</p>
+			<hr> -->
+			
+			<h2>Update 17/05/2019</h2>
+			<h3>Independence!!</h3>
+			<p>Good news, we no longer need ImageMagick, that's right, instead of importing a text file, you can now simply upload the image and receive the cfg file directly!</p>
 			<p>The text fields have been removed, you can do the whole process just by clicking the two buttons.</p>
-			<p>Check the old guide below, it still works the same way:</p>
+			<p>Check the new guide below:</p>
+			<hr>
 			<h2>Guide:</h2>
-			<p>First of all you need to choose one of the online tools to convert your image to a txt file (they all use ImageMagick to convert).</p>
-			<p>After downloading the txt file, you can import or paste it into the left text field (If you paste, the image name will not be saved).</p>
-			<p>The text field on the right is where the result will be stored after you click Convert, you can download the cfg (result) file by clicking on the last button.</p>
-			<img width="550px" src="demo.png"/>
+			<p>Click the button to select and upload an image, as soon as your image is read and transformed into text, you can download it in .cfg format.</p>
+			<p>The download button is only available when the conversion is done.</p>
 			<h3>What's Data Reader?</h3>
 			<p>This field is dedicated to the CubeScript that is responsible for transforming the hexadecimal values ​​into cubes ingame.</p>
 			<!-- <p>The default is a simple data reader, not perfect but works fine, I hope someone more skilled make a better version of it.</p> -->
 			<p>It is added to the end of the output, after converting.</p>
 			<p>if you want to make your own 'Data reader' (<strong>not necessary</strong>), the important variables are:</p>
 			<p><span style="color: gray">$imtoc_imagename<br>$imtoc_imagew<br>$imtoc_imageh<br>$imtoc_colordata</span></p>
-			<p>(and the alpha value has 10 characters, a normal color only 8)</p>
+			<!-- <p>(and the alpha value has 10 characters, a normal color only 8)</p> -->
 			<h2>Ingame Guide:</h2>
-			<p>After putting the cfg file in the sauerbraten folder and running it ingame...</p>
+			<p>After putting the cfg file in the sauerbraten folder, run it ingame by typing <span style="color: gray">/exec filename.cfg</span></p>
 			<p>Assuming you're using the data reader made by RaZgRiZ...</p>
 			<p><span style="color: gray">/drawloadimg</span> the name of the image should be the cfg name you downloaded earlier.</p>
 			<p><span style="color: gray">/drawreset</span> will reset the 'pixel id' value to 0, you must do this every time you start a new image.</p>
