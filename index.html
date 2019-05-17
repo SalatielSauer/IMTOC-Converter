@@ -4,10 +4,12 @@
 		<meta charset="UTF-8">
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<link href="https://fonts.googleapis.com/css?family=PT+Sans|Ubuntu" rel="stylesheet">	
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans|Ubuntu" rel="stylesheet">
+		
 	</head>
 
 	<body>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="imtoc_web.js"></script>
 		<script src="datareaders.js"></script>
 		<center>
@@ -17,19 +19,14 @@
 			<p style="color: white">Data Reader</p>
 			<p style="color: gray; font-size: 12px;">paste here the cubescript that will handle the color data (or use the default by RaZgRiZ)</p>
 			<textarea style="color: #80ea97; width: 600px; height: 70px" spellcheck="false" id="datareader"></textarea>
-			<div class="content">
-			<label>
-				<input type="file" id="fileinput"><br><br><br><br><br><br><br>Import TXT</input>
-			</label>
-				<textarea style="color: #b0d27b" spellcheck="false" id="text"></textarea>
-				<button id="convert" onclick="startfor()">Convert ←→</button>
-				<textarea id="cfg" spellcheck="false" ></textarea>
-				<button id="download" onclick="downloadcfg()">Download CFG</button>
-			</div>
-			<p style="color: gray; font-size: x-small;">the conversion may take a while with large files</p>
 			<br>
-			<hr>
+			<input type=hidden id="cfg"></input>
+			<label>
+				<input type="file" accept=".txt" id="fileinput" ><span id="fileinputtext">Select .txt File & Convert to .cfg</span></input>
+			</label>
+			<a style="background-color: #5d5d5d; cursor: unset; user-select: none;" id="downloadbtn">Download</a>
 		</center>
+			<center><p style="color: white; position: relative; top: 15;" id="filestatus"><br></p></center>
 			<p style="color: white">Useful online tools to convert image to txt:</p>
 			<a style="font-size: small" target="_blank" href="https://magick.imagemagick.org/MagickStudio/scripts/MagickStudio.cgi">https://magick.imagemagick.org/MagickStudio/scripts/MagickStudio.cgi</a>
 			<br>
@@ -37,6 +34,10 @@
 			<br>
 			<a style="font-size: small" target="_blank" href="https://imagemagick.online/">https://imagemagick.online/</a>
 			<hr>
+			<h2>Update 16/05/2019</h2>
+			<p>You can now send larger text files with less time consuming than before.</p>
+			<p>The text fields have been removed, you can do the whole process just by clicking the two buttons.</p>
+			<p>Check the old guide below, it still works the same way:</p>
 			<h2>Guide:</h2>
 			<p>First of all you need to choose one of the online tools to convert your image to a txt file (they all use ImageMagick to convert).</p>
 			<p>After downloading the txt file, you can import or paste it into the left text field (If you paste, the image name will not be saved).</p>
