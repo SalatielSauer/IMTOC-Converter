@@ -27,7 +27,11 @@ function importtxt(evt) {
 		};
 		txtfile.readAsText(userfile);
 		
-	} else { alert("Failed to import text file"); return}
+	} else { 
+		alert("Failed to import text file");
+		downloadbtn.style = "";
+		return;
+	};
 };
 
 function convert(text){
