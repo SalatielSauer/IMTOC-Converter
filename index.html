@@ -6,7 +6,6 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans|Ubuntu" rel="stylesheet">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-
 	</head>
 
 	<body>
@@ -21,7 +20,7 @@
 			<p style="color: gray; font-size: 12px;">paste here the cubescript that will handle the color data (or use the default by RaZgRiZ)</p>
 			<textarea style="color: #80ea97; width: 600px; height: 70px" spellcheck="false" id="datareader"></textarea>
 			<br>
-			<canvas style="display: none" id="imageCanvas"></canvas>
+			<canvas style="display: none;" id="imageCanvas"></canvas>
 			<label>
 				<input type="file" accept="image/*" id="fileinput" ><span id="fileinputtext"><i class="far fa-image"></i> Upload Image & Convert to .cfg</span></input>
 			</label>
@@ -35,7 +34,6 @@
 			<br>
 			<a style="font-size: small" target="_blank" href="https://imagemagick.online/">https://imagemagick.online/</a>
 			<hr> -->
-			
 			<h2>Update 17/05/2019</h2>
 			<h3>Independence!!</h3>
 			<p>Good news, we no longer need ImageMagick, that's right, instead of importing a text file, you can now simply upload the image and receive the cfg file directly!</p>
@@ -46,7 +44,7 @@
 			<p>Click the button to select and upload an image, as soon as your image is read and transformed into text, you can download it in .cfg format.</p>
 			<p>The download button is only available when the conversion is done.</p>
 			<h3>What's Data Reader?</h3>
-			<p>This field is dedicated to the CubeScript that is responsible for transforming the hexadecimal values ​​into cubes ingame.</p>
+			<p>This field is dedicated to the CubeScript that is responsible for transforming the color values ​​into cubes ingame.</p>
 			<!-- <p>The default is a simple data reader, not perfect but works fine, I hope someone more skilled make a better version of it.</p> -->
 			<p>It is added to the end of the output, after converting.</p>
 			<p>if you want to make your own 'Data reader' (<strong>not necessary</strong>), the important variables are:</p>
