@@ -13,6 +13,10 @@ window.onload = function(){
 	downloadbtn = document.getElementById("downloadbtn");
 };
 
+function fixstr(str){
+	if (str.length > 10){return (str.substr(0, 10) + "...");} {return str};
+};
+
 userfile = "untitled";
 txtfilename = "untitled.cfg";
 
@@ -20,7 +24,7 @@ function importImg(e){
     var reader = new FileReader();
 	userfile = e.target.files[0];
 	if (userfile){
-		inputtext.innerText = "Reading image...";
+		inputtext.innerHTML = ("<p>Reading image <span style='color: grey'>" + fixstr(userfile.name) + "</span></p>");
 		reader.onload = function(event){
 			var img = new Image();
 			img.onload = function(){
