@@ -6,6 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans|Ubuntu" rel="stylesheet">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+		<script async defer src="https://buttons.github.io/buttons.js"></script>
 	</head>
 
 	<body>
@@ -26,68 +27,68 @@
 			</label>
 			<a style="background-color: #5d5d5d; cursor: unset; user-select: none;" id="downloadbtn"><i class="fas fa-file-download"></i> Download</a>
 		</center>
-			<center><p style="color: white; position: relative; top: 15;" id="filestatus"><br></p></center>
-			<!-- <p style="color: white">Useful online tools to convert image to txt:</p>
-			<a style="font-size: small" target="_blank" href="https://magick.imagemagick.org/MagickStudio/scripts/MagickStudio.cgi">https://magick.imagemagick.org/MagickStudio/scripts/MagickStudio.cgi</a>
-			<br>
-			<a style="font-size: small" target="_blank" href="https://www.online-utility.org/image/convert/to/TXT">https://www.online-utility.org/image/convert/to/TXT</a>
-			<br>
-			<a style="font-size: small" target="_blank" href="https://imagemagick.online/">https://imagemagick.online/</a>
-			<hr> -->
-			<h2>Update 17/05/2019</h2>
-			<h3>Independence!!</h3>
-			<p>Good news, we no longer need ImageMagick, instead of importing a text file you can now simply upload an image and download the cfg file directly!</p>
-			<p>The text fields have been removed, you can do the whole process just by clicking the two buttons.</p>
-			<p>Check the new guide below:</p>
-			<hr>
-			<h2>Guide:</h2>
-			<p>Click the button to select and upload an image, as soon as your image is read and transformed into text, you can download it in .cfg format.</p>
-			<p>The download button is only available when the conversion is done.</p>
-			<h3>What's Data Reader?</h3>
-			<p>This field is dedicated to the CubeScript that is responsible for transforming the color values ​​into cubes ingame.</p>
-			<!-- <p>The default is a simple data reader, not perfect but works fine, I hope someone more skilled make a better version of it.</p> -->
-			<p>It is added to the end of the output, after converting.</p>
-			<p>if you want to make your own 'Data reader' (<strong>not necessary</strong>), the important variables are:</p>
-			<p><span style="color: gray">$imtoc_imagename<br>$imtoc_imagew<br>$imtoc_imageh<br>$imtoc_colordata</span></p>
-			<!-- <p>(and the alpha value has 10 characters, a normal color only 8)</p> -->
-			<h2>Ingame Guide:</h2>
-			<p>After putting the cfg file in the sauerbraten folder, run it ingame by typing <span style="color: gray">/exec filename.cfg</span></p>
-			<p>Assuming you're using the data reader made by RaZgRiZ...</p>
-			<p><span style="color: gray">/drawloadimg</span> the name of the image should be the cfg name you downloaded earlier.</p>
-			<p><span style="color: gray">/drawreset</span> will reset the 'pixel id' value to 0, you must do this every time you start a new image.</p>
-			<p><span style="color: gray">/drawundo</span> this subtracts the width value from the 'pixel id', then you can re-draw this line.</p>
-			<p><span style="color: gray">/drawrow</span> this is the command that will actually draw the pixel/cube.<p>
-			<div style="overflow: hidden;height: 200px;display: inline-block;box-shadow: 0 0 20px 0px black;"><img src="demo7.gif" style="margin-top: -20;"></div>
-			<hr>
-			<h2>Examples:</h2>
-			<div style="display: flex">
-				<div>
-					<div class="overtext">
-						<p>You can steal fonts with this</p>
-					</div>
-					<img src="demo2.png"/>
+		<center><p style="color: white; position: relative; top: 15;" id="filestatus"><br></p></center>
+		<!-- <p style="color: white">Useful online tools to convert image to txt:</p>
+		<a style="font-size: small" target="_blank" href="https://magick.imagemagick.org/MagickStudio/scripts/MagickStudio.cgi">https://magick.imagemagick.org/MagickStudio/scripts/MagickStudio.cgi</a>
+		<br>
+		<a style="font-size: small" target="_blank" href="https://www.online-utility.org/image/convert/to/TXT">https://www.online-utility.org/image/convert/to/TXT</a>
+		<br>
+		<a style="font-size: small" target="_blank" href="https://imagemagick.online/">https://imagemagick.online/</a>
+		<hr> -->
+		<h2>Update 17/05/2019</h2>
+		<h3>Independence!!</h3>
+		<p>Good news, we no longer need ImageMagick, instead of importing a text file you can now simply upload an image and download the cfg file directly!</p>
+		<p>The text fields have been removed, you can do the whole process just by clicking the two buttons.</p>
+		<p>Check the new guide below:</p>
+		<hr>
+		<h2>Guide:</h2>
+		<p>Click the button to select and upload an image, as soon as your image is read and transformed into text, you can download it in .cfg format.</p>
+		<p>The download button is only available when the conversion is done.</p>
+		<h3>What's Data Reader?</h3>
+		<p>This field is dedicated to the CubeScript that is responsible for transforming the color values ​​into cubes ingame.</p>
+		<!-- <p>The default is a simple data reader, not perfect but works fine, I hope someone more skilled make a better version of it.</p> -->
+		<p>It is added to the end of the output, after converting.</p>
+		<p>if you want to make your own 'Data reader' (<strong>not necessary</strong>), the important variables are:</p>
+		<p><span style="color: gray">$imtoc_imagename<br>$imtoc_imagew<br>$imtoc_imageh<br>$imtoc_colordata</span></p>
+		<!-- <p>(and the alpha value has 10 characters, a normal color only 8)</p> -->
+		<h2>Ingame Guide:</h2>
+		<p>After putting the cfg file in the sauerbraten folder, run it ingame by typing <span style="color: gray">/exec filename.cfg</span></p>
+		<p>Assuming you're using the data reader made by RaZgRiZ...</p>
+		<p><span style="color: gray">/drawloadimg</span> the name of the image should be the cfg name you downloaded earlier.</p>
+		<p><span style="color: gray">/drawreset</span> will reset the 'pixel id' value to 0, you must do this every time you start a new image.</p>
+		<p><span style="color: gray">/drawundo</span> this subtracts the width value from the 'pixel id', then you can re-draw this line.</p>
+		<p><span style="color: gray">/drawrow</span> this is the command that will actually draw the pixel/cube.<p>
+		<div style="overflow: hidden;height: 200px;display: inline-block;box-shadow: 0 0 20px 0px black;"><img src="demo7.gif" style="margin-top: -20;"></div>
+		<hr>
+		<h2>Examples:</h2>
+		<div style="display: flex">
+			<div>
+				<div class="overtext">
+					<p>You can steal fonts with this</p>
 				</div>
-
-				<div>
-					<div class="overtext">
-						<p>and surprise your friends with your pixel art skills.</p>
-					</div>
-					<img src="demo4.png"/>
-				</div>
+				<img src="demo2.png"/>
 			</div>
-			<br>
-			<p>Tip: if you are an advanced player and <a target="_blank" href='https://gist.github.com/SalatielSauer/d0c3f7676d7962c8451eb701fc1220f3#gistcomment-2956010'>movesel</a> function is already present on your client, try the <a target="_blank" href='https://github.com/SalatielSauer/IMTOC-Converter/blob/master/scripts/autodraw.cfg'>autodraw</a> data reader and create heightmap-based 3D pixel arts!</p>
-			<div style="display: flex">
-				<div>
-					<div class="overtext">
-						<p>Show the world your art, now in more depth.</p>
-					</div>
-					<img src="demo5.png"/>
-				</div>
-				<img src="demo6.png"/>
-			</div>
-			<br>
-			<p style="text-align: center; font-size: 12px; color: white">IMTOC by <a href="https://salatielsauer.github.io">@SalatielSauer</a></p>
 
+			<div>
+				<div class="overtext">
+					<p>and surprise your friends with your pixel art skills.</p>
+				</div>
+				<img src="demo4.png"/>
+			</div>
+		</div>
+		<br>
+		<p>Tip: if you are an advanced player and <a target="_blank" href='https://gist.github.com/SalatielSauer/d0c3f7676d7962c8451eb701fc1220f3#gistcomment-2956010'>movesel</a> function is already present on your client, try the <a target="_blank" href='https://github.com/SalatielSauer/IMTOC-Converter/blob/master/scripts/autodraw.cfg'>autodraw</a> data reader and create heightmap-based 3D pixel arts!</p>
+		<div style="display: flex">
+			<div>
+				<div class="overtext">
+					<p>Show the world your art, now in more depth.</p>
+				</div>
+				<img src="demo5.png"/>
+			</div>
+			<img src="demo6.png"/>
+		</div>
+		<br>
+		<p style="text-align: center; font-size: 12px; color: white">IMTOC by <a href="https://salatielsauer.github.io">@SalatielSauer</a></p>
+		<a class="github-button" href="https://github.com/SalatielSauer/IMTOC-Converter" data-color-scheme="no-preference: light; light: dark; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star SalatielSauer/IMTOC-Converter on GitHub">Star</a>
 	</body>
 </html>
