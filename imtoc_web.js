@@ -10,7 +10,9 @@ window.onload = function(){
 	datareader = document.getElementById("datareader");
 	datareader.value = drfaultvalue;
 	inputtext = document.getElementById("filestatus");
+	inputtext.innerHTML = "<p><br></p>"
 	downloadbtn = document.getElementById("downloadbtn");
+	document.getElementById("buttonsarea").style.display = "unset";
 };
 
 function fixstr(str){

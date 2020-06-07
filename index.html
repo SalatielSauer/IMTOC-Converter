@@ -22,12 +22,14 @@
 			<textarea style="color: #80ea97; width: 600px; height: 70px" spellcheck="false" id="datareader"></textarea>
 			<br>
 			<canvas style="display: none;" id="imageCanvas"></canvas>
-			<label>
-				<input type="file" accept="image/*" id="fileinput" ><span id="fileinputtext"><i class="far fa-image"></i> Upload Image & Convert to .cfg</span></input>
-			</label>
-			<a style="background-color: #5d5d5d; cursor: unset; user-select: none;" id="downloadbtn"><i class="fas fa-file-download"></i> Download</a>
+			<div id="buttonsarea" style="display: none">
+				<label>
+					<input type="file" accept="image/*" id="fileinput" ><span id="fileinputtext"><i class="far fa-image"></i> Upload Image & Convert to .cfg</span></input>
+				</label>
+				<a style="background-color: #5d5d5d; cursor: unset; user-select: none;" id="downloadbtn"><i class="fas fa-file-download"></i> Download</a>
+			</div>
 		</center>
-		<center><p style="color: white; position: relative; top: 15;" id="filestatus"><br></p></center>
+		<center><p style="color: white; position: relative; top: 15;" id="filestatus">Loading default data reader...<br></p></center>
 		<!-- <p style="color: white">Useful online tools to convert image to txt:</p>
 		<a style="font-size: small" target="_blank" href="https://magick.imagemagick.org/MagickStudio/scripts/MagickStudio.cgi">https://magick.imagemagick.org/MagickStudio/scripts/MagickStudio.cgi</a>
 		<br>
