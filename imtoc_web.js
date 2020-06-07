@@ -1,19 +1,17 @@
 //IMTOC 2.0 by Salatiel, special thanks to RaZgRiZ for giving me some important tips about the output format.
 
-window.onload = function(){
-	drfaultvalue = dr_razgriz;
-	imageLoader = document.getElementById('fileinput');
-	imageLoader.addEventListener('change', importImg, false);
-	canvas = document.getElementById('imageCanvas');
-	ctx = canvas.getContext('2d');
+drfaultvalue = dr_razgriz;
+imageLoader = document.getElementById('fileinput');
+imageLoader.addEventListener('change', importImg, false);
+canvas = document.getElementById('imageCanvas');
+ctx = canvas.getContext('2d');
 
-	datareader = document.getElementById("datareader");
-	datareader.value = drfaultvalue;
-	inputtext = document.getElementById("filestatus");
-	inputtext.innerHTML = "<p><br></p>"
-	downloadbtn = document.getElementById("downloadbtn");
-	document.getElementById("buttonsarea").style.display = "unset";
-};
+datareader = document.getElementById("datareader");
+datareader.value = drfaultvalue;
+inputtext = document.getElementById("filestatus");
+inputtext.innerHTML = "<p><br></p>"
+downloadbtn = document.getElementById("downloadbtn");
+document.getElementById("buttonsarea").style.display = "unset";
 
 function fixstr(str){
 	if (str.length > 10){return (str.substr(0, 10) + "...");} {return str};
