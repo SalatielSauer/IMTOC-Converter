@@ -1,0 +1,337 @@
+@font-face {
+    font-family: 'Sauer_default';
+    src: url('sauerfont.ttf');
+}
+
+:root {
+    --editor-height: 800px;
+    --editor-width: 612px;
+}
+
+a {
+    text-decoration: none;
+    color: coral;
+    cursor: pointer;
+}
+
+a:hover {
+    color: rgb(255, 173, 80);
+}
+
+strong {
+    color: #686868;
+    font-size: small;
+}
+
+.texteditor_editor {
+    background: transparent;
+    caret-color: white;
+    color: transparent;
+    outline: none;
+    transition: border-color 0.2s;
+    white-space: pre;
+    z-index: 1;
+    border-style: none;
+    word-wrap: normal;
+    border-color: #444242;
+}
+
+.texteditor_editor:focus {
+    border-color: #008ab4;
+}
+
+.texteditor_editor::selection {
+    background-color: #ed143db5;
+    color: white;
+}
+
+.texteditor_pre,
+.texteditor_editor {
+    overflow: auto;
+    margin: 0px;
+}
+
+.texteditor_code {
+    color: #bfbfbf;
+    filter: hue-rotate(310deg) saturate(3);
+    pointer-events: none;
+    text-shadow: 0px 1px 3px black;
+    padding-bottom: 4%;
+    outline-offset: -2px;
+}
+
+.texteditor_code,
+.texteditor_editor {
+    font-family: 'Sauer_default';
+    font-size: 12px;
+    display: block;
+    height: var(--editor-height);
+    max-height: var(--editor-height);
+    max-width: var(--editor-width);
+    min-width: var(--editor-width);
+    position: absolute;
+    resize: none;
+    width: var(--editor-width);
+    text-wrap: balance;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #141315;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0px;
+}
+
+button {
+    background-color: #595eff;
+    border-style: solid;
+    border-width: 3px;
+    color: white;
+    border-color: white;
+    box-shadow: 0 0 7px 0px black;
+    font-size: large;
+    padding: 7px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #28a8b1;
+}
+
+button:disabled {
+    background-color: #202020;
+    border-style: solid;
+    border-width: 3px;
+    font-size: large;
+    padding: 7px;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.container {
+    display: flex;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px; 
+}
+
+.header h1 {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 2em;  
+    margin-bottom: 5px;  
+}
+
+.header p {
+    font-size: 1.1em;
+    line-height: 1.4;  
+    color: #aaa;
+    max-width: 600px;
+    margin: 5px 0;  
+}
+
+.header a {
+    color: #2196F3;
+    text-decoration: none;
+}
+
+.header a:hover {
+    text-decoration: underline;
+}
+
+.interface-header {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #2a2a2a;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.controls {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.file-input-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+#fileInput {
+    display: none;
+}
+
+.quality-control {
+    user-select: none;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-width: min-content;
+    justify-content: center;
+}
+
+#range-image-quality {
+    flex-grow: 1;
+    height: 6px;
+    -webkit-appearance: none;
+    background: #4aedfd;
+    border-radius: 3px;
+    outline: none;
+    width: 400px;
+}
+
+#range-image-quality:disabled {
+    pointer-events: none;
+    background: grey;
+    filter: opacity(0.5);
+}
+
+#range-image-quality::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#canvas-container {
+    position: relative;
+    overflow: hidden;
+    width: 512px;
+    height: 512px;
+    border: 2px solid #333;
+    margin: 20px;
+    background: #0c0c0c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-image: url(../images/sky01_ft.jpg);
+    transition: box-shadow 0.1s, border 0.1s, filter 0.1s;
+}
+
+#canvas-container.dragging {
+    border: 2px dashed #4caf50;
+    background-color: #f0fff0;
+    box-shadow: 0 0 15px #595eff;
+    filter: brightness(1.5);
+}
+
+#canvas {
+    image-rendering: pixelated;
+    border-style: dashed;
+    border-color: white;
+    background-image: url("../images/placeholder.png");
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+.instructions {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    pointer-events: none;
+}
+
+#texteditor {
+    min-width: -webkit-fill-available;
+    min-height: -webkit-fill-available;
+}
+
+.floating-container {
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: #000000d9;
+    /* height: 512px; */
+    width: 512px;
+    padding: 0px;
+    margin: 0px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    filter: drop-shadow(0px 0px 9px black);
+}
+
+.floating-container h2 {
+    position: absolute;
+    margin: 20px;
+    color: aquamarine;
+    top: -12px;
+    left: -12px;
+}
+
+.floating-container-header {
+    background-color: rgb(20 17 20);
+    height: 32px;
+    user-select: none;
+    padding: 5px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-style: dashed;
+    border-width: 1px;
+    border-color: aquamarine;
+    width: 600px;
+}
+
+#floating-container-footnote {
+    position: absolute;
+    right: -75px;
+    font-size: small;
+    color: aquamarine;
+    z-index: 2;
+    user-select: none;
+}
+
+.container-dropdown {
+    float: right;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.container-dropdown select {
+    background-color: #7fffd4;
+    font-family: 'Sauer_default';
+    border-style: none;
+    padding: 5px;
+    border-radius: 10px;
+    color: black;
+}
+
+/* out-of-place highlight (shj) hack */
+[class*=shj-lang-] {
+    padding: 15px;
+    margin: 0px;
+    background: #00000000;
+    border-style: dashed;
+    border-width: 1px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+[class*=shj-lang-]>div {
+    display: block;
+    max-height: 100%;
+    overflow: auto;
+    text-wrap: balance;
+}
+[class*=shj-lang-]>div::-webkit-scrollbar,
+[class*=shj-lang-]>div::-webkit-scrollbar-track,
+[class*=shj-lang-]>div::-webkit-scrollbar-thumb {
+    background: transparent;
+    background-color: transparent;
+    -webkit-box-shadow: unset;
+}
